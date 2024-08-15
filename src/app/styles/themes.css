@@ -1,0 +1,138 @@
+/* forest-dark */
+:root {
+  --primary: 158, 228, 147;
+  --primary-content: 9, 18, 8;
+  --secondary: 218, 247, 220;
+  --secondary-content: 17, 21, 17;
+  --accent: 112, 86, 109;
+  --accent-content: 225, 219, 224;
+  --neutral: 171, 200, 192;
+  --neutral-content: 11, 15, 14;
+  --base-100: 15, 26, 19;
+  --base-200: 11, 21, 15;
+  --base-300: 8, 16, 11;
+  --base-content: 201, 204, 202;
+  --info: 133, 224, 255;
+  --info-content: 6, 18, 22;
+  --success: 112, 255, 148;
+  --success-content: 4, 22, 8;
+  --warning: 255, 240, 71;
+  --warning-content: 22, 20, 2;
+  --error: 255, 133, 133;
+  --error-content: 22, 6, 6;
+}
+
+[data-theme='light'] {
+  --primary: 86, 159, 113;
+  --primary-content: 2, 9, 4;
+  --secondary: 123, 183, 139;
+  --secondary-content: 5, 12, 7;
+  --accent: 107, 139, 199;
+  --accent-content: 4, 7, 14;
+  --neutral: 156, 156, 150;
+  --neutral-content: 9, 9, 8;
+  --base-100: 246, 255, 255;
+  --base-200: 214, 222, 222;
+  --base-300: 183, 190, 190;
+  --base-content: 21, 22, 22;
+  --info: 133, 224, 255;
+  --info-content: 6, 18, 22;
+  --success: 112, 255, 148;
+  --success-content: 4, 22, 8;
+  --warning: 255, 240, 71;
+  --warning-content: 22, 20, 2;
+  --error: 255, 133, 133;
+  --error-content: 22, 6, 6;
+}
+
+[data-theme='dark'] {
+  --primary: 158, 228, 147;
+  --primary-content: 9, 18, 8;
+  --secondary: 218, 247, 220;
+  --secondary-content: 17, 21, 17;
+  --accent: 112, 86, 109;
+  --accent-content: 225, 219, 224;
+  --neutral: 171, 200, 192;
+  --neutral-content: 11, 15, 14;
+  --base-100: 15, 26, 19;
+  --base-200: 11, 21, 15;
+  --base-300: 8, 16, 11;
+  --base-content: 201, 204, 202;
+  --info: 133, 224, 255;
+  --info-content: 6, 18, 22;
+  --success: 112, 255, 148;
+  --success-content: 4, 22, 8;
+  --warning: 255, 240, 71;
+  --warning-content: 22, 20, 2;
+  --error: 255, 133, 133;
+  --error-content: 22, 6, 6;
+}
+
+[data-theme='80s'] {
+  --primary: 255, 0, 176;
+  --primary-content: 22, 0, 11;
+  --secondary: 0, 216, 255;
+  --secondary-content: 0, 17, 22;
+  --accent: 0, 47, 255;
+  --accent-content: 201, 221, 255;
+  --neutral: 40, 23, 29;
+  --neutral-content: 208, 203, 204;
+  --base-100: 255, 253, 255;
+  --base-200: 222, 220, 222;
+  --base-300: 190, 188, 190;
+  --base-content: 22, 22, 22;
+  --info: 0, 227, 255;
+  --info-content: 0, 18, 22;
+  --success: 0, 151, 82;
+  --success-content: 0, 8, 2;
+  --warning: 166, 79, 0;
+  --warning-content: 239, 219, 208;
+  --error: 207, 63, 79;
+  --error-content: 251, 218, 218;
+}
+
+[data-theme='subnautical'] {
+  --primary: 0, 128, 255;
+  --primary-content: 0, 6, 22;
+  --secondary: 0, 244, 216;
+  --secondary-content: 0, 20, 17;
+  --accent: 0, 230, 191;
+  --accent-content: 0, 19, 13;
+  --neutral: 29, 23, 22;
+  --neutral-content: 204, 203, 202;
+  --base-100: 38, 38, 38;
+  --base-200: 32, 32, 32;
+  --base-300: 25, 25, 25;
+  --base-content: 207, 207, 207;
+  --info: 0, 138, 157;
+  --info-content: 0, 7, 9;
+  --success: 137, 219, 66;
+  --success-content: 7, 17, 1;
+  --warning: 222, 180, 0;
+  --warning-content: 18, 12, 0;
+  --error: 255, 104, 109;
+  --error-content: 22, 4, 4;
+}
+
+[data-theme='toy'] {
+  --primary: 0, 119, 255;
+  --primary-content: 0, 5, 22;
+  --secondary: 0, 136, 0;
+  --secondary-content: 211, 232, 209;
+  --accent: 255, 153, 0;
+  --accent-content: 22, 8, 0;
+  --neutral: 4, 4, 4;
+  --neutral-content: 196, 196, 196;
+  --base-100: 255, 246, 217;
+  --base-200: 222, 214, 189;
+  --base-300: 190, 183, 161;
+  --base-content: 22, 21, 17;
+  --info: 0, 223, 255;
+  --info-content: 0, 18, 22;
+  --success: 0, 162, 80;
+  --success-content: 0, 10, 2;
+  --warning: 232, 179, 0;
+  --warning-content: 19, 12, 0;
+  --error: 212, 46, 59;
+  --error-content: 253, 217, 214;
+}
