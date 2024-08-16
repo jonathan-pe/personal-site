@@ -26,17 +26,14 @@ export default function Navbar() {
   const [isHidden, setIsHidden] = useState(false)
   const [lastScrollTop, setLastScrollTop] = useState(0)
 
-  // Set a scroll distance threshold in pixels
-  const scrollThreshold = 100
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop
 
-      if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+      if (scrollTop > lastScrollTop && scrollTop > SCROLL_THRESHOLD) {
         // Scroll down past the threshold - hide navbar
         setIsHidden(true)
-      } else if (scrollTop < lastScrollTop || scrollTop <= scrollThreshold) {
+      } else if (scrollTop < lastScrollTop || scrollTop <= SCROLL_THRESHOLD) {
         // Scroll up or within the threshold - show navbar
         setIsHidden(false)
       }
