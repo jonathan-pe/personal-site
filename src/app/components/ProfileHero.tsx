@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Watching from '@/images/watching.jpg'
-import { GitHubIcon, InstagramIcon, LinkedInIcon, SoundCloudIcon, TwitchIcon } from '@/images/SocialMediaIcons'
+import ICONS from '@/images/SocialMediaIcons'
 
 export default function ProfileHero() {
   return (
@@ -10,42 +10,26 @@ export default function ProfileHero() {
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-base-content sm:text-6xl">Software Engineer.</h1>
           <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-6xl">Gamer.</h1>
           <h1 className="text-4xl font-bold tracking-tight text-accent sm:text-6xl">Bedroom DJ.</h1>
+
           <p className="mt-6 text-lg leading-8 text-base-content/75">
             {`Hello there! I'm Jonathan, a software engineer located in the San Francisco Bay Area. I'm a user-focused
             front-end specialist who loves building pixel-perfect, responsive, and aesthetically pleasing web
             applications. I also enjoy playing video games, mixing music, and playing pickleball in my free time.`}
           </p>
-          <div className="mt-10 flex items-center gap-x-1">
-            <a
-              href={LinkedInIcon.href}
-              className="px-2 py-2 text-sm font-semibold fill-base-content border border-none border-transparent hover:bg-blue-500 hover:fill-black"
-            >
-              <LinkedInIcon.icon />
-            </a>
-            <a
-              href={GitHubIcon.href}
-              className="px-2 py-2 text-sm font-semibold fill-base-content border border-transparent hover:bg-neutral hover:fill-neutral-content"
-            >
-              <GitHubIcon.icon />
-            </a>
-            <a
-              href={SoundCloudIcon.href}
-              className="px-2 py-2 text-sm font-semibold fill-base-content border border-none border-transparent hover:bg-orange-500 hover:fill-black"
-            >
-              <SoundCloudIcon.icon />
-            </a>
-            <a
-              href={InstagramIcon.href}
-              className="px-2 py-2 text-sm font-semibold fill-base-content border border-none hover:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:fill-black"
-            >
-              <InstagramIcon.icon />
-            </a>
-            <a
-              href={TwitchIcon.href}
-              className="px-2 py-2 text-sm font-semibold fill-base-content border border-none border-transparent hover:bg-purple-600 hover:fill-black"
-            >
-              <TwitchIcon.icon />
-            </a>
+
+          <div className="mt-10 flex items-center gap-x-4">
+            {ICONS.map((icon) => (
+              <a
+                key={icon.name}
+                href={icon.href}
+                className="text-base-content fill-base-content hover:fill-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="sr-only">{icon.name}</span>
+                <icon.icon aria-hidden="true" className="h-8 w-8" />
+              </a>
+            ))}
           </div>
         </div>
         <div className="max-w-md flex-none md:max-w-xl lg:max-w-2xl">

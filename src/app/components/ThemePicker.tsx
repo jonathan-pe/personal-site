@@ -5,13 +5,13 @@ import { Popover, PopoverPanel, PopoverButton } from '@headlessui/react'
 import { useTheme } from 'next-themes'
 import { capitalizeFirstLetter } from '@/lib/utils'
 
-type Theme = 'light' | '80s' | 'dark' | 'subnautical' | 'toy'
+type Theme = 'light' | '80s' | 'dark' | 'subnautica' | 'toy'
 
 const THEMES: Record<string, Theme> = {
   LIGHT: 'light',
   DARK: 'dark',
   EIGHTIES: '80s',
-  SUBNAUTICAL: 'subnautical',
+  SUBNAUTICAL: 'subnautica',
   TOY: 'toy',
 }
 

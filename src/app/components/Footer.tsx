@@ -6,7 +6,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {ICONS.map((icon) => (
-            <a key={icon.name} href={icon.href} className="text-base-content">
+            <a
+              key={icon.name}
+              href={icon.href}
+              className="text-base-content fill-base-content hover:fill-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="sr-only">{icon.name}</span>
               <icon.icon aria-hidden="true" className="h-6 w-6" />
             </a>
