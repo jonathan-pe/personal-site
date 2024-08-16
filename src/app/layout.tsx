@@ -3,12 +3,18 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from 'next-themes'
+import { Metadata } from 'next'
 
 const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
 })
+
+export const metadata: Metadata = {
+  title: 'Jonathan Pe',
+  description: 'Personal website of Jonathan Pe',
+}
 
 export default function RootLayout({
   children,

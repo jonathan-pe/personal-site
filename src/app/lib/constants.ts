@@ -8,7 +8,7 @@ export const LINKS = {
 
 export type Link = keyof typeof LINKS
 
-export type Job = {
+export interface Job {
   id: string
   companyName: string
   role: string
@@ -17,7 +17,7 @@ export type Job = {
   accomplishments: string[]
 }
 
-export type SideProject = {
+export interface SideProject {
   id: string
   projectName: string
   url: string
@@ -25,14 +25,14 @@ export type SideProject = {
   techUsed: string[]
 }
 
-export type Skill = {
+export interface Skill {
   id: string
   name: string
   level: number
   category: string
 }
 
-export type Education = {
+export interface Education {
   id: string
   institutionName: string
   certificationReceived: string
@@ -40,7 +40,7 @@ export type Education = {
   endDate: string
 }
 
-export const RESUME = [
+export const RESUME: Array<Job> = [
   {
     id: 'apple-teksystems',
     companyName: 'Apple',
@@ -108,7 +108,7 @@ export const RESUME = [
   },
 ]
 
-export const sideProjects = [
+export const sideProjects: Array<SideProject> = [
   {
     id: 'personalWebsite',
     projectName: 'Personal Website',
@@ -125,7 +125,7 @@ export const sideProjects = [
   },
 ]
 
-export const SKILLS = [
+export const SKILLS: Array<Skill> = [
   {
     id: 'reactjs',
     name: 'React.js',
@@ -182,7 +182,7 @@ export const SKILLS = [
   },
 ]
 
-export const EDUCATION = [
+export const EDUCATION: Array<Education> = [
   {
     id: 'calpolySLO',
     institutionName: 'California Polytechnic State University: San Luis Obispo, CA',
