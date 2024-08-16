@@ -1,9 +1,12 @@
+'use client'
+
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 
 import profileIcon from '@/images/profileIcon.jpg'
 import ThemePicker from '@/components/ThemePicker'
+import { useEffect, useState } from 'react'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -17,8 +20,41 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+  const [isHidden, setIsHidden] = useState(false)
+  const [lastScrollTop, setLastScrollTop] = useState(0)
+
+  // Set a scroll distance threshold in pixels
+  const scrollThreshold = 100
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop
+
+      if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+        // Scroll down past the threshold - hide navbar
+        setIsHidden(true)
+      } else if (scrollTop < lastScrollTop || scrollTop <= scrollThreshold) {
+        // Scroll up or within the threshold - show navbar
+        setIsHidden(false)
+      }
+
+      setLastScrollTop(scrollTop)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [lastScrollTop])
+
   return (
-    <Disclosure as="nav" className="bg-base-200 text-neutral-content w-full sticky top-0 z-10">
+    <Disclosure
+      as="nav"
+      className={`bg-base-200 text-neutral-content w-full sticky top-0 z-10 transition ${
+        isHidden ? '-translate-y-20' : ''
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

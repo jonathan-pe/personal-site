@@ -22,7 +22,8 @@
   --error-content: 22, 6, 6;
 }
 
-[data-theme='light'] {
+[data-theme='light'],
+[data-theme='calm'] {
   --primary: 86, 159, 113;
   --primary-content: 2, 9, 4;
   --secondary: 123, 183, 139;
@@ -45,7 +46,8 @@
   --error-content: 22, 6, 6;
 }
 
-[data-theme='dark'] {
+[data-theme='dark'],
+[data-theme='forest'] {
   --primary: 158, 228, 147;
   --primary-content: 9, 18, 8;
   --secondary: 218, 247, 220;

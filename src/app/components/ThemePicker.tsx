@@ -5,11 +5,11 @@ import { Popover, PopoverPanel, PopoverButton } from '@headlessui/react'
 import { useTheme } from 'next-themes'
 import { capitalizeFirstLetter } from '@/lib/utils'
 
-type Theme = 'light' | '80s' | 'dark' | 'subnautica' | 'toy'
+type Theme = 'light' | '80s' | 'dark' | 'subnautica' | 'toy' | 'calm' | 'forest'
 
 const THEMES: Record<string, Theme> = {
-  LIGHT: 'light',
-  DARK: 'dark',
+  CALM: 'calm',
+  FOREST: 'forest',
   EIGHTIES: '80s',
   SUBNAUTICAL: 'subnautica',
   TOY: 'toy',
@@ -19,7 +19,7 @@ export default function ThemePicker() {
   const { theme, setTheme } = useTheme()
   return (
     <Popover>
-      <PopoverButton className="rounded-full bg-base-200 p-2 text-base-content hover:text-primary-content">
+      <PopoverButton className="rounded-full bg-base-200 p-2 text-base-content hover:text-base-content/75">
         <SwatchIcon aria-hidden="true" className="h-6 w-6" />
       </PopoverButton>
       <PopoverPanel
