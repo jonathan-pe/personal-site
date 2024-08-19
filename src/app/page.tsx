@@ -12,7 +12,7 @@ export default function Home() {
         <div className="mx-auto px-6 pb-10 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-10 lg:gap-12">
           <SkillsSection />
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-10">
             <SendEmailModal />
             <MiniResume />
           </div>

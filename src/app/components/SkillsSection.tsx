@@ -1,5 +1,5 @@
 import React from 'react'
-import { SKILLS } from '@/lib/constants'
+import { SKILLS } from '@/lib/meInfo'
 // import Image from 'next/image'
 // import BronzeMedal from '@/images/BronzeMedal.svg'
 // import SilverMedal from '@/images/SilverMedal.svg'

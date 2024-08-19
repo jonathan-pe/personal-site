@@ -9,12 +9,12 @@ export default function ProfileHero() {
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 mb-10">
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-base-content sm:text-6xl">Software Engineer.</h1>
           <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-6xl">Gamer.</h1>
-          <h1 className="text-4xl font-bold tracking-tight text-accent sm:text-6xl">Bedroom DJ.</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-accent sm:text-6xl">DJ.</h1>
 
           <p className="mt-6 text-lg leading-8 text-base-content/75">
-            {`Hello there! I'm Jonathan, a software engineer located in the San Francisco Bay Area. I'm a user-focused
-            front-end specialist who loves building pixel-perfect, responsive, and aesthetically pleasing web
-            applications. I also enjoy playing video games, mixing music, and playing pickleball in my free time.`}
+            Hello there! I&apos;m Jonathan, a software engineer located in the San Francisco Bay Area. I&apos;m a
+            user-focused, front-end specialist who loves building pixel-perfect, responsive, and aesthetically pleasing
+            web applications. I also enjoy playing video games, mixing music, and playing pickleball in my free time.
           </p>
 
           <div className="mt-10 flex items-center gap-x-4">
