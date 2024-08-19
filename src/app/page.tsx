@@ -1,7 +1,7 @@
 import ProfileHero from '@/components/ProfileHero'
-import SkillBars from './components/SkillBars'
+import SkillsSection from './components/SkillsSection'
 import MiniResume from './components/MiniResume'
-import ContactForm from './components/ContactForm'
+import SendEmailModal from './components/Contact'
 
 export default function Home() {
   return (
@@ -10,10 +10,11 @@ export default function Home() {
 
       <section className="relative isolate overflow-hidden">
         <div className="mx-auto px-6 pb-10 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-10 lg:gap-12">
-          <SkillBars />
-          <div>
+          <SkillsSection />
+
+          <div className="flex flex-col gap-4">
+            <SendEmailModal />
             <MiniResume />
-            <ContactForm />
           </div>
         </div>
       </section>
