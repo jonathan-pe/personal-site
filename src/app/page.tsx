@@ -5,7 +5,7 @@ import SendEmailModal from './components/Contact'
 
 export default function Home() {
   return (
-    <main className="flex flex-1 w-full flex-col items-center justify-between px-8 sm:px-12 md:px-14 lg:px-24">
+    <main className="flex flex-1 w-full flex-col items-center justify-between px-6 sm:px-12 md:px-14 lg:px-24">
       <ProfileHero />
 
       <section className="relative isolate overflow-hidden">
