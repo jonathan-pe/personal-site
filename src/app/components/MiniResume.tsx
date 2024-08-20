@@ -43,7 +43,7 @@ const MiniResume: React.FC = () => {
         </div>
 
         <a
-          href="/public/Résumé.pdf"
+          href="/Résumé.pdf"
           download="Jonathan Pe Résumé"
           target="_blank"
           rel="noopener noreferrer"
