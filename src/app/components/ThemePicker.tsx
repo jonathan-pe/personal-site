@@ -16,7 +16,10 @@ const THEMES: Record<string, Theme> = {
 }
 
 export default function ThemePicker() {
-  const { setTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
+
+  console.log(theme)
+
   return (
     <Popover>
       <PopoverButton className="rounded-full bg-base-200 p-2 text-base-content hover:text-base-content/75">
@@ -32,6 +35,11 @@ export default function ThemePicker() {
             key={key}
             type="button"
             onClick={() => setTheme(THEMES[key])}
+            style={
+              theme === THEMES[key]
+                ? { backgroundColor: 'rgba(var(--primary)', color: 'rgba(var(--primary-content))' }
+                : {}
+            }
             className="p-2 my-1 rounded-lg text-base-content hover:bg-primary/50 hover:text-primary-content"
           >
             {capitalizeFirstLetter(THEMES[key])}

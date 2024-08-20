@@ -23,7 +23,7 @@ const MiniResume: React.FC = () => {
                     rel="noopener noreferrer"
                     className="relative flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 ring-base-content/25 bg-base-300 hover:bg-base-300/50"
                   >
-                    <job.icon.icon className="h-6 w-6 fill-primary" />
+                    <job.icon.icon className="h-6 w-6 fill-base-content" />
                   </a>
 
                   <div className="flex flex-col flex-grow">
