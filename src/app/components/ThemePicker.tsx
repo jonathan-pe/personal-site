@@ -18,8 +18,6 @@ const THEMES: Record<string, Theme> = {
 export default function ThemePicker() {
   const { theme, setTheme } = useTheme()
 
-  console.log(theme)
-
   return (
     <Popover>
       <PopoverButton className="rounded-full bg-base-200 p-2 text-base-content hover:text-base-content/75">

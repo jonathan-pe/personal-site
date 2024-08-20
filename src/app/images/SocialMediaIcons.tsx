@@ -27,7 +27,7 @@ export const LinkedInIcon: Icon = {
 }
 
 export const GitHubIcon: Icon = {
-  name: 'Instagram',
+  name: 'GitHub',
   href: 'https://github.com/jonathan-pe',
   icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" {...props}>
@@ -37,7 +37,7 @@ export const GitHubIcon: Icon = {
 }
 
 export const TwitchIcon: Icon = {
-  name: 'Instagram',
+  name: 'Twitch',
   href: 'https://twitch.tv/jpe_TV',
   icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 30 30" {...props}>
