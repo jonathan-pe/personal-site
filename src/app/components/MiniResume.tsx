@@ -43,8 +43,8 @@ const MiniResume: React.FC = () => {
         </div>
 
         <a
-          href="/Résumé.pdf"
-          download="Jonathan Pe Résumé"
+          href="/Jonathan Pe's Resume.pdf"
+          download="Jonathan Pe's Resume"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 px-2 py-1 w-full flex justify-center items-center bg-primary border border-base-content/25 text-primary-content font-semibold"
