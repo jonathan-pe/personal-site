@@ -15,6 +15,24 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Jonathan Pe',
   description: 'Personal Software Engineering portfolio/website of Jonathan Pe',
+  keywords: [
+    'Jonathan Pe',
+    'Software Engineer',
+    'Web Developer',
+    'Frontend Engineer',
+    'React',
+    'Next.js',
+    'Tailwind CSS',
+    'TypeScript',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'shadcn',
+    'portfolio',
+    'resume',
+    'personal website',
+    'server components',
+  ],
 }
 
 export default function RootLayout({
