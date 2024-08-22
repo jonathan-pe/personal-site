@@ -59,7 +59,7 @@ export const RESUME: Array<Job> = [
   },
   {
     id: 'STRATIM_OPENLANE',
-    companyName: 'OPENLANE (previously STRATIM)',
+    companyName: 'OPENLANE (STRATIM)',
     role: 'Full Stack Software Engineer',
     startDate: 'Jan 2019',
     endDate: 'Mar 2020',

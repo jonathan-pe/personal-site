@@ -5,13 +5,13 @@ import ICONS from '@/images/SocialMediaIcons'
 export default function ProfileHero() {
   return (
     <section className="relative isolate overflow-hidden">
-      <div className="mx-auto px-6 pb-12 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-32 lg:gap-12">
+      <div className="mx-auto px-6 py-2 sm:pb-32 lg:flex lg:px-8 lg:py-32 lg:gap-12">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 mb-10">
-          <h1 className="mt-10 text-4xl font-bold tracking-tight text-base-content sm:text-6xl">Software Engineer.</h1>
-          <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-6xl">Gamer.</h1>
-          <h1 className="text-4xl font-bold tracking-tight text-accent sm:text-6xl">DJ.</h1>
+          <h1 className="mt-10 text-3xl font-bold tracking-tight sm:text-6xl">Software Engineer.</h1>
+          <h1 className="text-3xl font-bold tracking-tight text-primary sm:text-6xl">Gamer.</h1>
+          <h1 className="text-3xl font-bold tracking-tight text-accent sm:text-6xl">DJ.</h1>
 
-          <p className="mt-6 text-lg leading-8 text-base-content/75">
+          <p className="mt-6 text-md leading-8 sm:text-lg">
             Hello there! I&apos;m Jonathan, a software engineer located in the San Francisco Bay Area. I&apos;m a
             user-focused, front-end specialist who loves building pixel-perfect, responsive, and aesthetically pleasing
             web applications. I also enjoy playing video games, mixing music, and playing pickleball in my free time.
@@ -22,7 +22,7 @@ export default function ProfileHero() {
               <a
                 key={icon.name}
                 href={icon.href}
-                className="text-base-content fill-base-content hover:fill-primary"
+                className="fill-foreground hover:fill-primary"
                 target="_blank"
                 rel="noopener noreferrer"
               >

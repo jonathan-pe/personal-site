@@ -1,12 +1,14 @@
 'use client'
 
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
-
-import profileIcon from '@/images/profileIcon.jpg'
-import ThemePicker from '@/components/ThemePicker'
 import { useEffect, useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from '@radix-ui/react-navigation-menu'
+import { MenuIcon } from 'lucide-react'
+import Link from 'next/link'
+import Image from 'next/image'
+import profileIcon from '@/images/profileIcon.jpg'
+import ThemePicker from './ThemePicker'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -14,10 +16,6 @@ const navigation = [
   { name: 'Projects', href: '#', current: false },
   { name: 'Calendar', href: '#', current: false },
 ]
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
 
 // Scroll threshold in pixels
 const SCROLL_THRESHOLD = 100
@@ -49,73 +47,60 @@ export default function Navbar() {
   }, [lastScrollTop])
 
   return (
-    <Disclosure
-      as="nav"
-      className={`bg-base-200 text-neutral-content w-full sticky top-0 z-10 transition ${
+    <header
+      className={`flex shrink-0 items-center justify-between px-6 md:px-32 py-6 bg-background w-full sticky z-10 top-0 transition ${
         isHidden ? '-translate-y-20' : ''
       }`}
     >
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-base-content hover:bg-primary/50">
-              <span className="absolute -inset-0.5" />
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
-              <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
-            </DisclosureButton>
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="ghost" size="icon" className="lg:hidden">
+            <MenuIcon className="h-6 w-6" />
+            <span className="sr-only">Toggle navigation menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="left">
+          <Button variant="outline" size="icon" className="h-10 w-10 rounded-full">
+            <Link href="#" prefetch={false}>
+              <Image alt="profile icon" src={profileIcon} className="rounded-full" />
+              <span className="sr-only">My Logo</span>
+            </Link>
+          </Button>
+          <div className="grid gap-2 py-6">
+            {navigation.map((item) => (
+              <Link key={item.name} href={item.href} prefetch={false}>
+                {item.name}
+              </Link>
+            ))}
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-              <Image alt="profile icon" src={profileIcon} className="h-8 w-auto rounded-full" />
-            </div>
-            <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    aria-current={item.current ? 'page' : undefined}
-                    className={classNames(
-                      item.current
-                        ? 'bg-primary text-primary-content'
-                        : 'text-base-content hover:bg-primary/20 hover:text-base-content',
-                      'rounded-md px-3 py-2 text-sm font-medium',
-                    )}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <ThemePicker />
-          </div>
-        </div>
+        </SheetContent>
+      </Sheet>
+      <div className="flex gap-8">
+        <Button variant="outline" size="icon" className="h-10 w-10 rounded-full">
+          <Link href="#" prefetch={false}>
+            <Image alt="profile icon" src={profileIcon} className="rounded-full" />
+            <span className="sr-only">My Logo</span>
+          </Link>
+        </Button>
+        <NavigationMenu className="hidden lg:flex">
+          <NavigationMenuList>
+            {navigation.map((item) => (
+              <NavigationMenuLink asChild key={item.name}>
+                <Link
+                  href={item.href}
+                  className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-muted"
+                  prefetch={false}
+                >
+                  {item.name}
+                </Link>
+              </NavigationMenuLink>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
-
-      <DisclosurePanel className="sm:hidden">
-        <div className="space-y-1 px-2 pb-3 pt-2">
-          {navigation.map((item) => (
-            <DisclosureButton
-              key={item.name}
-              as="a"
-              href={item.href}
-              aria-current={item.current ? 'page' : undefined}
-              className={classNames(
-                item.current
-                  ? 'bg-primary text-primary-content'
-                  : 'text-base-content hover:bg-primary/20 hover:text-base-content',
-                'block rounded-md px-3 py-2 text-base font-medium',
-              )}
-            >
-              {item.name}
-            </DisclosureButton>
-          ))}
-        </div>
-      </DisclosurePanel>
-    </Disclosure>
+      <div>
+        <ThemePicker />
+      </div>
+    </header>
   )
 }

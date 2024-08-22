@@ -9,7 +9,7 @@ export default function Footer() {
             <a
               key={icon.name}
               href={icon.href}
-              className="text-base-content fill-base-content hover:fill-primary"
+              className="fill-foreground hover:fill-primary"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -19,9 +19,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
-          <p className="text-center text-xs leading-5 text-base-content">
-            &copy; 2024 Jonathan Pe. All rights reserved.
-          </p>
+          <p className="text-center text-xs leading-5">&copy; 2024 Jonathan Pe. All rights reserved.</p>
         </div>
       </div>
     </footer>
