@@ -43,13 +43,13 @@ const MiniResume: React.FC = () => {
           })}
         </div>
 
-        <Button className="mt-4 w-full" size="sm">
+        <Button className="mt-4 w-full p-0" size="sm">
           <a
             href="/Jonathan Pe's Resume.pdf"
             download="Jonathan Pe's Resume"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex justify-center items-center"
+            className="flex justify-center items-center w-full h-full"
           >
             <span>Download CV</span>
             <ArrowDownCircleIcon className="h-5 w-5 ml-2" />
