@@ -1,6 +1,6 @@
 import { Poppins } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/Navbar'
+// import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from 'next-themes'
 import { Metadata } from 'next'
@@ -29,7 +29,7 @@ export default function RootLayout({
         <ThemeProvider enableColorScheme>
           {/* div wrapper is just a workaround for now until headlessUI fixes click out bug on PopoverPanel */}
           <div className="w-full">
-            <Navbar />
+            {/* <Navbar /> */}
             {children}
             <Footer />
           </div>
