@@ -9,7 +9,7 @@ export default function ProfileHero() {
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 mb-10">
           <h1 className="mt-10 text-3xl font-bold tracking-tight sm:text-6xl">Software Engineer.</h1>
           <h1 className="text-3xl font-bold tracking-tight text-primary sm:text-6xl">Gamer.</h1>
-          <h1 className="text-3xl font-bold tracking-tight text-accent sm:text-6xl">DJ.</h1>
+          <h1 className="text-3xl font-bold tracking-tight text-secondary sm:text-6xl">DJ.</h1>
 
           <p className="mt-6 text-md leading-8 sm:text-lg">
             Hello there! I&apos;m Jonathan, a software engineer located in the San Francisco Bay Area. I&apos;m a
