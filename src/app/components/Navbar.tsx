@@ -48,7 +48,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`flex shrink-0 items-center justify-between px-6 md:px-32 py-6 bg-background w-full sticky z-10 top-0 transition ${
+      className={`flex shrink-0 items-center justify-between px-6 md:px-32 py-4 bg-background w-full sticky z-10 top-0 transition ${
         isHidden ? '-translate-y-20' : ''
       }`}
     >
