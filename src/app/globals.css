@@ -19,6 +19,10 @@ body {
   color: hsl(var(--foreground));
 }
 
+* {
+  border-color: hsl(var(--border));
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
