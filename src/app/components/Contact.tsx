@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Loader2 } from 'lucide-react'
 import { useToast } from '@/components/ui/use-toast'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
 const ContactDialog: React.FC = () => {
   const [isSending, setIsSending] = useState<boolean>(false)
@@ -63,7 +64,7 @@ const ContactDialog: React.FC = () => {
   return (
     <Dialog modal={true} open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild onClick={() => setIsOpen(true)}>
-        <Button variant="default" size="sm" className="w-full mt-4">
+        <Button variant="default" size="sm" className="w-full">
           <span>Send Email</span>
           <PaperAirplaneIcon className="h-5 w-5 ml-2" />
         </Button>
@@ -103,21 +104,20 @@ const ContactDialog: React.FC = () => {
 
 const Contact: React.FC = () => {
   return (
-    <>
-      <div className="overflow-hidden rounded-lg bg-card text-card-foreground border max-w-96">
-        <div className="px-4 py-5 sm:px-6">
-          <div className="flex gap-2 mb-3 items-center">
-            <EnvelopeIcon className="h-6 w-6" />
-            <h3 className="text-md font-semibold leading-6">Get in touch</h3>
-          </div>
-          <span className="mt-1 text-sm">
-            Hey, thanks for visiting 😊 Send over a message and let me know where you&apos;re visiting from!
-          </span>
-
-          <ContactDialog />
-        </div>
-      </div>
-    </>
+    <Card className="max-w-md">
+      <CardHeader>
+        <CardTitle className="flex gap-2 items-center">
+          <EnvelopeIcon className="h-6 w-6" />
+          Get in touch
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="flex flex-col gap-6">
+        <span>Hey, thanks for visiting 😊 Send over a message and let me know where you&apos;re visiting from!</span>
+      </CardContent>
+      <CardFooter>
+        <ContactDialog />
+      </CardFooter>
+    </Card>
   )
 }
 
