@@ -4,7 +4,7 @@ import ICONS from '@/images/SocialMediaIcons'
 
 export default function ProfileHero() {
   return (
-    <section className="flex w-full flex-col lg:flex-row justify-center items-center gap-10 mx-auto py-12 px-4 xl:px-16">
+    <section className="flex w-full flex-col lg:flex-row justify-center items-center gap-10 mx-auto py-12 px-4 xl:px-16 mt-6">
       <div className="flex flex-col justify-center flex-1">
         <h1 className="text-3xl font-bold tracking-tight md:text-5xl 2xl:text-6xl">Software Engineer.</h1>
         <h1 className="text-3xl font-bold tracking-tight text-primary md:text-5xl 2xl:text-6xl">Gamer.</h1>
