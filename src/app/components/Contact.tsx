@@ -104,7 +104,7 @@ const ContactDialog: React.FC = () => {
 
 const Contact: React.FC = () => {
   return (
-    <Card className="max-w-md">
+    <Card>
       <CardHeader>
         <CardTitle className="flex gap-2 items-center">
           <EnvelopeIcon className="h-6 w-6" />

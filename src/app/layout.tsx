@@ -45,12 +45,9 @@ export default function RootLayout({
       <head />
       <body className={poppins.className}>
         <ThemeProvider enableColorScheme>
-          {/* div wrapper is just a workaround for now until headlessUI fixes click out bug on PopoverPanel */}
-          <div className="w-full">
-            {/* <Navbar /> */}
-            {children}
-            <Footer />
-          </div>
+          {/* <Navbar /> */}
+          {children}
+          <Footer />
         </ThemeProvider>
         <Toaster />
       </body>

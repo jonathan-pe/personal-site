@@ -26,10 +26,10 @@ const SkillBadge: React.FC<SkillBadgeProps> = ({ level }) => {
 
 const SkillsSection: React.FC = () => {
   return (
-    <div className="mx-auto flex-1 flex-shrink-0 lg:w-96 lg:mx-0 lg:max-w-xl mb-10">
+    <div className="flex flex-col w-full flex-1 lg:mx-0 mb-10 max-w-lg">
       <h2 className="text-3xl font-bold mb-8">Skills</h2>
       {SKILLS.map((skill) => (
-        <div key={skill.id} className="flex justify-between items-center">
+        <div key={skill.id} className="flex justify-between items-center gap-6">
           <h3 className="text-xl">{skill.name}</h3>
           <SkillBadge level={skill.level} />
         </div>
