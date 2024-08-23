@@ -32,9 +32,13 @@ const MiniResume: React.FC = () => {
                   <div className="flex justify-between items-center gap-4">
                     <span className="text-xs sm:text-sm">{shortenJobTitle(job.role)}</span>
                     <div className="flex justify-center items-center gap-1 text-xs sm:text-sm">
-                      <span>
-                        {job.startDate} - {job.endDate}
-                      </span>
+                      {/* cut month from date on small screens */}
+                      <span className="sm:hidden">{`${job.startDate.split(' ')[1]} - ${
+                        job.endDate.split(' ')[1]
+                      }`}</span>
+
+                      {/* show full date on larger screens */}
+                      <span className="hidden sm:block">{`${job.startDate} - ${job.endDate}`}</span>
                     </div>
                   </div>
                 </div>
