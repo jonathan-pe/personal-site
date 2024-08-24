@@ -47,59 +47,57 @@ export default function Navbar() {
   }, [lastScrollTop])
 
   return (
-    <header
-      className={`flex shrink-0 items-center justify-between px-6 md:px-32 py-4 bg-background w-full sticky z-10 top-0 transition ${
-        isHidden ? '-translate-y-20' : ''
-      }`}
-    >
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="lg:hidden">
-            <MenuIcon className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left">
+    <header className={`bg-background w-full sticky z-10 top-0 transition ${isHidden ? '-translate-y-20' : ''}`}>
+      <div className="h-16 container flex items-center justify-between max-w-screen-2xl">
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="md:hidden">
+              <MenuIcon className="h-6 w-6" />
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="left">
+            <Button variant="outline" size="icon" className="h-10 w-10 rounded-full">
+              <Link href="#" prefetch={false}>
+                <Image alt="profile icon" src={profileIcon} className="rounded-full" />
+                <span className="sr-only">My Logo</span>
+              </Link>
+            </Button>
+            <div className="grid gap-2 py-6">
+              {navigation.map((item) => (
+                <Link key={item.name} href={item.href} prefetch={false}>
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </SheetContent>
+        </Sheet>
+        <div className="flex gap-8">
           <Button variant="outline" size="icon" className="h-10 w-10 rounded-full">
             <Link href="#" prefetch={false}>
               <Image alt="profile icon" src={profileIcon} className="rounded-full" />
               <span className="sr-only">My Logo</span>
             </Link>
           </Button>
-          <div className="grid gap-2 py-6">
-            {navigation.map((item) => (
-              <Link key={item.name} href={item.href} prefetch={false}>
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </SheetContent>
-      </Sheet>
-      <div className="flex gap-8">
-        <Button variant="outline" size="icon" className="h-10 w-10 rounded-full">
-          <Link href="#" prefetch={false}>
-            <Image alt="profile icon" src={profileIcon} className="rounded-full" />
-            <span className="sr-only">My Logo</span>
-          </Link>
-        </Button>
-        <NavigationMenu className="hidden lg:flex">
-          <NavigationMenuList>
-            {navigation.map((item) => (
-              <NavigationMenuLink asChild key={item.name}>
-                <Link
-                  href={item.href}
-                  className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-muted"
-                  prefetch={false}
-                >
-                  {item.name}
-                </Link>
-              </NavigationMenuLink>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
-      <div>
-        <ThemePicker />
+          <NavigationMenu className="hidden md:flex">
+            <NavigationMenuList>
+              {navigation.map((item) => (
+                <NavigationMenuLink asChild key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-muted"
+                    prefetch={false}
+                  >
+                    {item.name}
+                  </Link>
+                </NavigationMenuLink>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+        <div>
+          <ThemePicker />
+        </div>
       </div>
     </header>
   )
