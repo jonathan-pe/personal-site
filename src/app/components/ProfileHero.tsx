@@ -4,11 +4,11 @@ import ICONS from '@/images/SocialMediaIcons'
 
 export default function ProfileHero() {
   return (
-    <section className="flex w-full flex-col lg:flex-row justify-center items-center gap-10 mx-auto py-12 px-4 xl:px-20 mt-6">
+    <section className="flex w-full flex-col lg:flex-row justify-center items-center gap-10 mx-auto py-12 px-4 max-w-7xl lg:mt-16">
       <div className="flex flex-col justify-center flex-1">
-        <h1 className="text-3xl font-bold tracking-tight md:text-4xl 2xl:text-6xl">Software Engineer.</h1>
-        <h1 className="text-3xl font-bold tracking-tight text-primary md:text-4xl 2xl:text-6xl">Gamer.</h1>
-        <h1 className="text-3xl font-bold tracking-tight text-secondary md:text-4xl 2xl:text-6xl">DJ.</h1>
+        <h1 className="text-3xl font-bold tracking-tight md:text-4xl xl:text-5xl 2xl:text-6xl">Software Engineer.</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-primary md:text-4xl xl:text-5xl 2xl:text-6xl">Gamer.</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-secondary md:text-4xl xl:text-5xl 2xl:text-6xl">DJ.</h1>
 
         <p className="mt-6 text-md leading-8 sm:text-lg">
           Hello there! I&apos;m Jonathan, a software engineer located in the San Francisco Bay Area. I&apos;m a
