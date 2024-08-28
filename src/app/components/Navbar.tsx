@@ -11,10 +11,9 @@ import profileIcon from '@/images/profileIcon.jpg'
 import ThemePicker from './ThemePicker'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Software Engineer', href: '/softwareEngineer' },
+  { name: 'Gamer', href: '/gamer' },
+  { name: 'DJ', href: '/dj' },
 ]
 
 // Scroll threshold in pixels
@@ -23,6 +22,8 @@ const SCROLL_THRESHOLD = 100
 export default function Navbar() {
   const [isHidden, setIsHidden] = useState(false)
   const [lastScrollTop, setLastScrollTop] = useState(0)
+
+  const isTopOfPage = typeof window !== 'undefined' && window.scrollY <= 1
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +48,11 @@ export default function Navbar() {
   }, [lastScrollTop])
 
   return (
-    <header className={`bg-background w-full sticky z-10 top-0 transition ${isHidden ? '-translate-y-20' : ''}`}>
+    <header
+      className={`bg-background w-full sticky z-10 top-0 transition ${isTopOfPage ? '' : 'shadow-md shadow-muted'} ${
+        isHidden ? '-translate-y-20' : ''
+      }`}
+    >
       <div className="h-16 container flex items-center justify-between max-w-screen-2xl">
         <Sheet>
           <SheetTrigger asChild>
@@ -58,7 +63,7 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="left">
             <Button variant="outline" size="icon" className="h-10 w-10 rounded-full">
-              <Link href="#" prefetch={false}>
+              <Link href="/" prefetch={false}>
                 <Image alt="profile icon" src={profileIcon} className="rounded-full" />
                 <span className="sr-only">My Logo</span>
               </Link>
@@ -74,7 +79,7 @@ export default function Navbar() {
         </Sheet>
         <div className="flex gap-8">
           <Button variant="outline" size="icon" className="h-10 w-10 rounded-full">
-            <Link href="#" prefetch={false}>
+            <Link href="/" prefetch={false}>
               <Image alt="profile icon" src={profileIcon} className="rounded-full" />
               <span className="sr-only">My Logo</span>
             </Link>

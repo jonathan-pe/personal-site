@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
           Get in touch
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-col gap-6">
+      <CardContent className="flex flex-col gap-6 text-muted-foreground">
         <span>Hey, thanks for visiting 😊 Send over a message and let me know where you&apos;re visiting from!</span>
       </CardContent>
       <CardFooter>

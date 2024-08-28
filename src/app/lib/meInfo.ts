@@ -142,6 +142,12 @@ export const SKILLS: Array<Skill> = [
     category: 'Backend',
   },
   {
+    id: 'nextjs',
+    name: 'Next.js',
+    level: 2,
+    category: 'Frontend',
+  },
+  {
     id: 'java',
     name: 'Java',
     level: 1,

@@ -1,6 +1,6 @@
 import { Poppins } from 'next/font/google'
 import './globals.css'
-// import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from 'next-themes'
 import { Metadata } from 'next'
@@ -45,7 +45,7 @@ export default function RootLayout({
       <head />
       <body className={poppins.className}>
         <ThemeProvider enableColorScheme>
-          {/* <Navbar /> */}
+          <Navbar />
           {children}
           <Footer />
         </ThemeProvider>
