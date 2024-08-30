@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function ResumeAccordion() {
   return (
-    <Accordion type="single" collapsible className="w-full max-w-7xl">
+    <Accordion type="single" collapsible className="flex flex-1 flex-col w-full min-w-[352px]">
       {RESUME.map((job) => {
         return (
           <AccordionItem value={job.id} key={job.id}>

@@ -23,7 +23,7 @@ export default function Navbar() {
   const [isHidden, setIsHidden] = useState(false)
   const [lastScrollTop, setLastScrollTop] = useState(0)
 
-  const isTopOfPage = typeof window !== 'undefined' && window.scrollY <= 1
+  const isTopOfPage = window?.scrollY <= 0
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,7 +49,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`bg-background w-full sticky z-10 top-0 transition ${isTopOfPage ? '' : 'shadow-md shadow-muted'} ${
+      className={`bg-background w-full sticky z-10 top-0 transition ${isTopOfPage ? '' : 'drop-shadow-md'} ${
         isHidden ? '-translate-y-20' : ''
       }`}
     >
