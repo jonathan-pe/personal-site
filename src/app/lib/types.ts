@@ -1,5 +1,6 @@
 import { SVGProps } from 'react'
 import { LINKS } from './meInfo'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
 export interface Icon {
   name: string
@@ -41,4 +42,10 @@ export interface Education {
   certificationReceived: string
   startDate: string
   endDate: string
+}
+
+export interface VideoGame {
+  id: string
+  title: string
+  icon: string | StaticImport
 }

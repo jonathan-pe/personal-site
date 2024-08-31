@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from '@radix-ui/react-navigation-menu'
+import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from '@/components/ui/navigation-menu'
 import { MenuIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'

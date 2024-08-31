@@ -1,5 +1,16 @@
 import { AppleIcon, DolbyIcon, GliffyIcon, ReputationIcon, STRATIMIcon } from '@/images/CompanyIcons'
-import { Education, Job, SideProject, Skill } from './types'
+import { Education, Job, SideProject, Skill, VideoGame } from './types'
+import {
+  ApexIcon,
+  CSGOIcon,
+  DeadlockIcon,
+  LEIcon,
+  LOLIcon,
+  LostArkIcon,
+  PoEIcon,
+  RLIcon,
+  ValorantIcon,
+} from '@/images/videogameIcons'
 
 export const LINKS = {
   TWITCH: 'https://www.twitch.tv/jpe_TV',
@@ -87,7 +98,7 @@ export const RESUME: Array<Job> = [
   },
 ]
 
-export const sideProjects: Array<SideProject> = [
+export const SIDE_PROJECTS: Array<SideProject> = [
   {
     id: 'personalWebsite',
     projectName: 'Personal Website',
@@ -168,5 +179,53 @@ export const EDUCATION: Array<Education> = [
     certificationReceived: 'B.S. Computer Science',
     startDate: 'September 2013',
     endDate: 'June 2017',
+  },
+]
+
+export const GAMES_PLAYED: Array<VideoGame> = [
+  {
+    id: 'leagueOfLegends',
+    title: 'League of Legends',
+    icon: LOLIcon,
+  },
+  {
+    id: 'valorant',
+    title: 'Valorant',
+    icon: ValorantIcon,
+  },
+  {
+    id: 'csgo',
+    title: 'Counter-Strike: Global Offensive',
+    icon: CSGOIcon,
+  },
+  {
+    id: 'apexLegends',
+    title: 'Apex Legends',
+    icon: ApexIcon,
+  },
+  {
+    id: 'lostArk',
+    title: 'Lost Ark',
+    icon: LostArkIcon,
+  },
+  {
+    id: 'pathOfExile',
+    title: 'Path of Exile',
+    icon: PoEIcon,
+  },
+  {
+    id: 'lastEpoch',
+    title: 'Last Epoch',
+    icon: LEIcon,
+  },
+  {
+    id: 'rocketLeague',
+    title: 'Rocket League',
+    icon: RLIcon,
+  },
+  {
+    id: 'deadlock',
+    title: 'Deadlock',
+    icon: DeadlockIcon,
   },
 ]
