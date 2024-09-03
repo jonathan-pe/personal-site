@@ -1,4 +1,4 @@
-import { AppleIcon, DolbyIcon, GliffyIcon, ReputationIcon, STRATIMIcon } from '@/images/CompanyIcons'
+import { AppleIcon, DolbyIcon, GliffyIcon, MetaIcon, ReputationIcon, STRATIMIcon } from '@/images/CompanyIcons'
 import { Education, Job, SideProject, Skill } from './types'
 
 export const LINKS = {
@@ -10,6 +10,21 @@ export const LINKS = {
 }
 
 export const RESUME: Array<Job> = [
+  {
+    id: 'meta-teksystems',
+    companyName: 'Meta',
+    role: 'Senior Frontend Software Engineer',
+    startDate: 'July 2024',
+    endDate: 'Present',
+    icon: MetaIcon,
+    accomplishments: [
+      "React development of new projects for Meta's Infrastructure & Data Center's team, leading to increased understanding and visibility over key performance metrics",
+      'Architected and created scalable, responsive React web pages, allowing for a more robust and iterable code base and enhancing the developer experience',
+      "Created robust and reusable components for Meta's component library, creating consistency across the team's applications",
+      'Collaborated with a team of engineers to develop and maintain an iterable codebase',
+    ],
+    techUsed: ['React', 'ant-design', 'LESS/SCSS', 'Node.js', 'GraphQL'],
+  },
   {
     id: 'apple-teksystems',
     companyName: 'Apple',
