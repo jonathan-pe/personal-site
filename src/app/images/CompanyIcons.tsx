@@ -116,7 +116,7 @@ export const MetaIcon: Icon = {
   href: 'https://meta.com/',
   icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="11" viewBox="0 0 16 11" {...props}>
-      <g clip-path="url(#clip0_19972_244769)">
+      <g>
         <path
           d="M4.40165 0.0546875C4.39678 0.0546875 4.39194 0.0547047 4.38708 0.0547298L4.36719 1.69809C4.37174 1.69804 4.37629 1.698 4.38085 1.698H4.38086C5.46253 1.698 6.30154 2.55086 8.12513 5.62254L8.2363 5.80954L8.24357 5.82178L9.2644 4.29012L9.25733 4.27829C9.01709 3.88756 8.78629 3.52806 8.56494 3.1998C8.30824 2.81945 8.06274 2.47967 7.8245 2.17631C6.61813 0.640297 5.60899 0.0546875 4.40165 0.0546875Z"
           fill="url(#paint0_linear_19972_244769)"
@@ -187,9 +187,9 @@ export const MetaIcon: Icon = {
           y2="0.757905"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0006" stop-color="#0867DF" />
-          <stop offset="0.4539" stop-color="#0668E1" />
-          <stop offset="0.8591" stop-color="#0064E0" />
+          <stop offset="0.0006" stopColor="#0867DF" />
+          <stop offset="0.4539" stopColor="#0668E1" />
+          <stop offset="0.8591" stopColor="#0064E0" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_19972_244769"
@@ -199,8 +199,8 @@ export const MetaIcon: Icon = {
           y2="0.558086"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.1323" stop-color="#0064DF" />
-          <stop offset="0.9988" stop-color="#0064E0" />
+          <stop offset="0.1323" stopColor="#0064DF" />
+          <stop offset="0.9988" stopColor="#0064E0" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_19972_244769"
@@ -210,8 +210,8 @@ export const MetaIcon: Icon = {
           y2="2.56535"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0147" stop-color="#0072EC" />
-          <stop offset="0.6881" stop-color="#0064DF" />
+          <stop offset="0.0147" stopColor="#0072EC" />
+          <stop offset="0.6881" stopColor="#0064DF" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_19972_244769"
@@ -221,8 +221,8 @@ export const MetaIcon: Icon = {
           y2="5.17414"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0731" stop-color="#007CF6" />
-          <stop offset="0.9943" stop-color="#0072EC" />
+          <stop offset="0.0731" stopColor="#007CF6" />
+          <stop offset="0.9943" stopColor="#0072EC" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_19972_244769"
@@ -232,8 +232,8 @@ export const MetaIcon: Icon = {
           y2="6.80902"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0731" stop-color="#007FF9" />
-          <stop offset="1" stop-color="#007CF6" />
+          <stop offset="0.0731" stopColor="#007FF9" />
+          <stop offset="1" stopColor="#007CF6" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_19972_244769"
@@ -243,8 +243,8 @@ export const MetaIcon: Icon = {
           y2="8.55559"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0731" stop-color="#007FF9" />
-          <stop offset="1" stop-color="#0082FB" />
+          <stop offset="0.0731" stopColor="#007FF9" />
+          <stop offset="1" stopColor="#0082FB" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_19972_244769"
@@ -254,8 +254,8 @@ export const MetaIcon: Icon = {
           y2="1.72324"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.2799" stop-color="#007FF8" />
-          <stop offset="0.9141" stop-color="#0082FB" />
+          <stop offset="0.2799" stopColor="#007FF8" />
+          <stop offset="0.9141" stopColor="#0082FB" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_19972_244769"
@@ -265,8 +265,8 @@ export const MetaIcon: Icon = {
           y2="6.35237"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0082FB" />
-          <stop offset="0.9995" stop-color="#0081FA" />
+          <stop stopColor="#0082FB" />
+          <stop offset="0.9995" stopColor="#0081FA" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_19972_244769"
@@ -276,8 +276,8 @@ export const MetaIcon: Icon = {
           y2="8.24143"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0619" stop-color="#0081FA" />
-          <stop offset="1" stop-color="#0080F9" />
+          <stop offset="0.0619" stopColor="#0081FA" />
+          <stop offset="1" stopColor="#0080F9" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_19972_244769"
@@ -287,8 +287,8 @@ export const MetaIcon: Icon = {
           y2="8.6049"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#027AF3" />
-          <stop offset="1" stop-color="#0080F9" />
+          <stop stopColor="#027AF3" />
+          <stop offset="1" stopColor="#0080F9" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_19972_244769"
@@ -298,8 +298,8 @@ export const MetaIcon: Icon = {
           y2="9.24502"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0377EF" />
-          <stop offset="0.9994" stop-color="#0279F1" />
+          <stop stopColor="#0377EF" />
+          <stop offset="0.9994" stopColor="#0279F1" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_19972_244769"
@@ -309,8 +309,8 @@ export const MetaIcon: Icon = {
           y2="9.1071"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0019" stop-color="#0471E9" />
-          <stop offset="1" stop-color="#0377EF" />
+          <stop offset="0.0019" stopColor="#0471E9" />
+          <stop offset="1" stopColor="#0377EF" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_19972_244769"
@@ -320,8 +320,8 @@ export const MetaIcon: Icon = {
           y2="8.3996"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.2765" stop-color="#0867DF" />
-          <stop offset="1" stop-color="#0471E9" />
+          <stop offset="0.2765" stopColor="#0867DF" />
+          <stop offset="1" stopColor="#0471E9" />
         </linearGradient>
         <clipPath id="clip0_19972_244769">
           <rect width="50" height="11" fill="white" />
