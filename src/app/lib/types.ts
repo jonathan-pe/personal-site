@@ -47,5 +47,6 @@ export interface Education {
 export interface VideoGame {
   id: string
   title: string
+  link: string
   icon: string | StaticImport
 }

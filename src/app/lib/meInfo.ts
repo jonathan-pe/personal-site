@@ -201,46 +201,55 @@ export const GAMES_PLAYED: Array<VideoGame> = [
   {
     id: 'leagueOfLegends',
     title: 'League of Legends',
+    link: 'https://leagueoflegends.com',
     icon: LOLIcon,
   },
   {
     id: 'valorant',
     title: 'Valorant',
+    link: 'https://playvalorant.com',
     icon: ValorantIcon,
   },
   {
     id: 'csgo',
     title: 'Counter-Strike: Global Offensive',
+    link: 'https://www.counter-strike.net/',
     icon: CSGOIcon,
   },
   {
     id: 'apexLegends',
     title: 'Apex Legends',
+    link: 'https://www.ea.com/games/apex-legends',
     icon: ApexIcon,
   },
   {
     id: 'lostArk',
     title: 'Lost Ark',
+    link: 'https://www.playlostark.com/en-us',
     icon: LostArkIcon,
   },
   {
     id: 'pathOfExile',
     title: 'Path of Exile',
+    link: 'https://www.pathofexile.com/',
     icon: PoEIcon,
   },
   {
     id: 'lastEpoch',
     title: 'Last Epoch',
+    link: 'https://lastepoch.com/',
     icon: LEIcon,
   },
   {
     id: 'rocketLeague',
     title: 'Rocket League',
+    link: 'https://www.rocketleague.com',
     icon: RLIcon,
   },
   {
     id: 'deadlock',
     title: 'Deadlock',
+    link: 'https://store.steampowered.com/app/1422450/Deadlock/',
     icon: DeadlockIcon,
   },
 ]

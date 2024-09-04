@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function Gamer() {
   return (
     <main className="flex flex-1 w-full flex-col items-start justify-center sm:justify-start px-4 sm:px-12 md:mt-16 md:px-14 lg:px-24">
-      <section className="mx-auto w-full flex justify-between flex-col md:flex-row px-2 lg:px-24 xl:px-28 gap-4 md:gap-20 mt-10">
-        <div className="flex flex-col justify-center flex-1">
+      <section className="mx-auto w-full flex justify-between flex-col md:flex-row px-2 lg:px-24 xl:px-28 gap-10 md:gap-20 mt-10">
+        <div className="flex flex-col justify-start flex-1">
           <h1 className="text-2xl font-bold tracking-tight md:text-2xl xl:text-4xl 2xl:text-5xl">Gamer.</h1>
           <p className="text-md md:text-lg text-muted-foreground mt-2">
             My love for video games started when I was a kid. I would play at my cousin&apos;s house whenever my family
