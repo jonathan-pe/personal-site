@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function ResumeAccordion() {
   return (
-    <Accordion type="single" collapsible className="flex flex-1 flex-col w-full min-w-[352px]">
+    <Accordion type="single" collapsible className="flex flex-1 flex-col w-full min-w-[320px]">
       {RESUME.map((job) => {
         return (
           <AccordionItem value={job.id} key={job.id}>
@@ -28,7 +28,7 @@ export default function ResumeAccordion() {
                     <div className="flex justify-center items-center gap-1 text-xs sm:text-sm">
                       {/* cut month from date on small screens */}
                       <span className="sm:hidden text-muted-foreground">{`${job.startDate.split(' ')[1]} - ${
-                        job.endDate.split(' ')[1]
+                        job.endDate.split(' ')[1] ?? 'Present'
                       }`}</span>
                       {/* show full date on larger screens */}
                       <span className="hidden sm:block text-muted-foreground">{`${job.startDate} - ${job.endDate}`}</span>
