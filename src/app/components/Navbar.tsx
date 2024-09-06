@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from '@radix-ui/react-navigation-menu'
+import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from '@/components/ui/navigation-menu'
 import { MenuIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -11,10 +11,9 @@ import profileIcon from '@/images/profileIcon.jpg'
 import ThemePicker from './ThemePicker'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Software Engineer', href: '/softwareEngineer' },
+  { name: 'Gamer', href: '/gamer' },
+  { name: 'DJ', href: '/dj' },
 ]
 
 // Scroll threshold in pixels
@@ -47,7 +46,11 @@ export default function Navbar() {
   }, [lastScrollTop])
 
   return (
-    <header className={`bg-background w-full sticky z-10 top-0 transition ${isHidden ? '-translate-y-20' : ''}`}>
+    <header
+      className={`bg-background w-full sticky z-10 top-0 transition ${lastScrollTop <= 0 ? '' : 'drop-shadow-md'} ${
+        isHidden ? '-translate-y-20' : ''
+      }`}
+    >
       <div className="h-16 container flex items-center justify-between max-w-screen-2xl">
         <Sheet>
           <SheetTrigger asChild>
@@ -58,7 +61,7 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="left">
             <Button variant="outline" size="icon" className="h-10 w-10 rounded-full">
-              <Link href="#" prefetch={false}>
+              <Link href="/" prefetch={false}>
                 <Image alt="profile icon" src={profileIcon} className="rounded-full" />
                 <span className="sr-only">My Logo</span>
               </Link>
@@ -74,7 +77,7 @@ export default function Navbar() {
         </Sheet>
         <div className="flex gap-8">
           <Button variant="outline" size="icon" className="h-10 w-10 rounded-full">
-            <Link href="#" prefetch={false}>
+            <Link href="/" prefetch={false}>
               <Image alt="profile icon" src={profileIcon} className="rounded-full" />
               <span className="sr-only">My Logo</span>
             </Link>

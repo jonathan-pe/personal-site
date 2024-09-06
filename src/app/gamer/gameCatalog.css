@@ -1,0 +1,25 @@
+#game-card {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#game-card::after {
+  content: '';
+  z-index: -1;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  width: 2.25em;
+  transform: translate3d(-525%, 0, 0) rotate(35deg);
+}
+
+#game-card:hover::after {
+  transition: transform 0.35s ease-in-out;
+  transform: translate3d(500%, 0, 0) rotate(35deg);
+}

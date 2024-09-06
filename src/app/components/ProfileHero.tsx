@@ -10,7 +10,7 @@ export default function ProfileHero() {
         <h1 className="text-3xl font-bold tracking-tight text-primary md:text-4xl xl:text-5xl 2xl:text-6xl">Gamer.</h1>
         <h1 className="text-3xl font-bold tracking-tight text-secondary md:text-4xl xl:text-5xl 2xl:text-6xl">DJ.</h1>
 
-        <p className="mt-6 text-md leading-8 sm:text-lg">
+        <p className="mt-6 text-md leading-8 sm:text-lg text-muted-foreground">
           Hello there! I&apos;m Jonathan, a software engineer located in the San Francisco Bay Area. I&apos;m a
           user-focused, front-end specialist who loves building pixel-perfect, responsive, and aesthetically pleasing
           web applications. I also enjoy playing video games, mixing music, and playing pickleball in my free time.

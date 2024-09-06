@@ -1,5 +1,16 @@
 import { AppleIcon, DolbyIcon, GliffyIcon, MetaIcon, ReputationIcon, STRATIMIcon } from '@/images/CompanyIcons'
-import { Education, Job, SideProject, Skill } from './types'
+import { Education, Job, SideProject, Skill, VideoGame } from './types'
+import {
+  ApexIcon,
+  CSGOIcon,
+  DeadlockIcon,
+  LEIcon,
+  LOLIcon,
+  LostArkIcon,
+  PoEIcon,
+  RLIcon,
+  ValorantIcon,
+} from '@/images/videogameIcons'
 
 export const LINKS = {
   TWITCH: 'https://www.twitch.tv/jpe_TV',
@@ -102,7 +113,7 @@ export const RESUME: Array<Job> = [
   },
 ]
 
-export const sideProjects: Array<SideProject> = [
+export const SIDE_PROJECTS: Array<SideProject> = [
   {
     id: 'personalWebsite',
     projectName: 'Personal Website',
@@ -157,6 +168,12 @@ export const SKILLS: Array<Skill> = [
     category: 'Backend',
   },
   {
+    id: 'nextjs',
+    name: 'Next.js',
+    level: 2,
+    category: 'Frontend',
+  },
+  {
     id: 'java',
     name: 'Java',
     level: 1,
@@ -177,5 +194,62 @@ export const EDUCATION: Array<Education> = [
     certificationReceived: 'B.S. Computer Science',
     startDate: 'September 2013',
     endDate: 'June 2017',
+  },
+]
+
+export const GAMES_PLAYED: Array<VideoGame> = [
+  {
+    id: 'leagueOfLegends',
+    title: 'League of Legends',
+    link: 'https://leagueoflegends.com',
+    icon: LOLIcon,
+  },
+  {
+    id: 'valorant',
+    title: 'Valorant',
+    link: 'https://playvalorant.com',
+    icon: ValorantIcon,
+  },
+  {
+    id: 'csgo',
+    title: 'Counter-Strike: Global Offensive',
+    link: 'https://www.counter-strike.net/',
+    icon: CSGOIcon,
+  },
+  {
+    id: 'apexLegends',
+    title: 'Apex Legends',
+    link: 'https://www.ea.com/games/apex-legends',
+    icon: ApexIcon,
+  },
+  {
+    id: 'lostArk',
+    title: 'Lost Ark',
+    link: 'https://www.playlostark.com/en-us',
+    icon: LostArkIcon,
+  },
+  {
+    id: 'pathOfExile',
+    title: 'Path of Exile',
+    link: 'https://www.pathofexile.com/',
+    icon: PoEIcon,
+  },
+  {
+    id: 'lastEpoch',
+    title: 'Last Epoch',
+    link: 'https://lastepoch.com/',
+    icon: LEIcon,
+  },
+  {
+    id: 'rocketLeague',
+    title: 'Rocket League',
+    link: 'https://www.rocketleague.com',
+    icon: RLIcon,
+  },
+  {
+    id: 'deadlock',
+    title: 'Deadlock',
+    link: 'https://store.steampowered.com/app/1422450/Deadlock/',
+    icon: DeadlockIcon,
   },
 ]
