@@ -3,7 +3,20 @@ import GameCatalog from './gameCatalog'
 
 export const metadata: Metadata = {
   title: 'Jonathan Pe | Gamer',
-  description: '',
+  description: 'Discover how I got into gaming and see some of my favorite games!',
+  keywords: [
+    'Jonathan Pe',
+    'Gamer',
+    'Video Games',
+    'Nintendo',
+    'Xbox',
+    'PC',
+    'Apex Legends',
+    'Valorant',
+    'Rocket League',
+    'Deadlock',
+    'League of Legends',
+  ],
 }
 
 export default function Gamer() {

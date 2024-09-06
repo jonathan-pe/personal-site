@@ -3,7 +3,25 @@ import ResumeAccordion from './ResumeAccordion'
 
 export const metadata: Metadata = {
   title: 'Jonathan Pe | Software Engineer',
-  description: '',
+  description: 'Learn about my journey as a Software Engineer and see my resume!',
+  keywords: [
+    'Jonathan Pe',
+    'Software Engineer',
+    'Web Developer',
+    'Frontend Engineer',
+    'React',
+    'Next.js',
+    'Tailwind CSS',
+    'TypeScript',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'shadcn',
+    'portfolio',
+    'resume',
+    'personal website',
+    'server components',
+  ],
 }
 
 export default function SoftwareEngineer() {

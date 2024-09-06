@@ -3,7 +3,8 @@ import SoundCloudEmbed from './SoundCloudEmbed'
 
 export const metadata: Metadata = {
   title: 'Jonathan Pe | DJ',
-  description: '',
+  description: 'See how I got into DJing and listen to some of my mixes!',
+  keywords: ['Jonathan Pe', 'DJ', 'EDM', 'Music', 'SoundCloud'],
 }
 
 export default function DJ() {
