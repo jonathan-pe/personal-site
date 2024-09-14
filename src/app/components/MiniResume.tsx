@@ -34,7 +34,7 @@ const MiniResume: React.FC = () => {
                     <div className="flex justify-center items-center gap-1 text-xs sm:text-sm">
                       {/* cut month from date on small screens */}
                       <span className="sm:hidden text-muted-foreground">{`${job.startDate.split(' ')[1]} - ${
-                        job.endDate.split(' ')[1]
+                        job.endDate.split(' ')[1] ?? 'Present'
                       }`}</span>
 
                       {/* show full date on larger screens */}
