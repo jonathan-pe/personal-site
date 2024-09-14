@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from '@/components/ui/navigation-menu'
 import { MenuIcon } from 'lucide-react'
 import Link from 'next/link'
@@ -68,9 +68,11 @@ export default function Navbar() {
             </Button>
             <div className="grid gap-2 py-6">
               {navigation.map((item) => (
-                <Link key={item.name} href={item.href} prefetch={false}>
-                  {item.name}
-                </Link>
+                <SheetClose asChild key={item.name}>
+                  <Link href={item.href} prefetch={false}>
+                    {item.name}
+                  </Link>
+                </SheetClose>
               ))}
             </div>
           </SheetContent>
