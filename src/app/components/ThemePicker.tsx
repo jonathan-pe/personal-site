@@ -19,7 +19,7 @@ export default function ThemePicker() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full p-2">
-          <SwatchIcon aria-hidden="true" />
+          <SwatchIcon aria-hidden="true" className="h-6 w-6" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
