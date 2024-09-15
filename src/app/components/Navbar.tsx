@@ -61,10 +61,12 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="left">
             <Button variant="outline" size="icon" className="h-10 w-10 rounded-full">
-              <Link href="/" prefetch={false}>
-                <Image alt="profile icon" src={profileIcon} className="rounded-full" />
-                <span className="sr-only">My Logo</span>
-              </Link>
+              <SheetClose asChild>
+                <Link href="/" prefetch={false}>
+                  <Image alt="profile icon" src={profileIcon} className="rounded-full" />
+                  <span className="sr-only">My Logo</span>
+                </Link>
+              </SheetClose>
             </Button>
             <div className="grid gap-2 py-6">
               {navigation.map((item) => (
