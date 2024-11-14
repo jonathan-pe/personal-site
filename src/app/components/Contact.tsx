@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Loader2 } from 'lucide-react'
 import { useToast } from '@/components/ui/use-toast'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import Link from 'next/link'
 
 const ContactDialog: React.FC = () => {
   const [isSending, setIsSending] = useState<boolean>(false)
@@ -63,12 +64,21 @@ const ContactDialog: React.FC = () => {
 
   return (
     <Dialog modal={true} open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger asChild onClick={() => setIsOpen(true)}>
-        <Button variant="default" size="sm" className="w-full">
+      {/* Commenting out since we're currently using Resend (email provider) for another app
+          and only get 1 free domain for free :) */}
+      {/* <DialogTrigger asChild onClick={() => setIsOpen(true)}> */}
+      <Button variant="default" size="sm" className="w-full">
+        <a
+          href="mailto:jonathanqpe@gmail.com"
+          className="w-full flex justify-center items-center"
+          target="_blank"
+          rel="noreferrer"
+        >
           <span>Send Email</span>
           <PaperAirplaneIcon className="h-5 w-5 ml-2" />
-        </Button>
-      </DialogTrigger>
+        </a>
+      </Button>
+      {/* </DialogTrigger> */}
       <DialogContent onInteractOutside={(e) => e.preventDefault()}>
         <DialogHeader>
           <DialogTitle>Send Email</DialogTitle>
